@@ -137,3 +137,12 @@ body{
     border-radius: 5px;
     font-size: 16px;
  }
+ /* CONTACTS */
+ .contact-item{
+    display: flex;
+    background-color: #ffffff;
+    line-height: 2;
+    border-top: 0.2px solid #faf9f7; ;
+    
+ }
+
