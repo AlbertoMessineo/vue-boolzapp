@@ -48,7 +48,13 @@
                 <div class="bar">
                     <input type="text" placeholder="    &#x1F50E;&#xFE0E;     Cerca o inizia una nuova chat">
                 </div>
-                <div class="contacts"></div>
+                <div class="contacts">
+                    <ul>
+                        <li v-for="contact in contacts">
+                        {{contacts.name}}
+                        </li>
+                    </ul>
+                </div>
             </div>
             <!-- RIGHT COLUMN -->
             <div class="col-right">
@@ -64,11 +70,7 @@
                     </div>
                 </div>
                 <div class="chat">
-                    <ul>
-                        <li v-for="contact in contacts">
-                        {{contacts.name}}
-                        </li>
-                    </ul>
+                    
                 </div>
                 <div class="message">
                     <i class="fa-regular fa-face-smile msg-icon"></i>
