@@ -138,11 +138,17 @@ body{
     font-size: 16px;
  }
  /* CONTACTS */
+ .contacts > ul{
+    width: calc(100% - 18px);
+    margin: 0 auto;
+    overflow-y: scroll;
+ }
  .contact-item{
+    padding: 18px 0;
     display: flex;
     background-color: #ffffff;
     line-height: 2;
     border-top: 0.2px solid #faf9f7; ;
-    
  }
+ 
 

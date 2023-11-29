@@ -25,9 +25,11 @@
         <div class="main-container">
             <!-- LEFT COLUMN -->
             <div class="col-left">
-                <div class="header border-right">
+                <div class="header border-right circle pro-pic">
                     <div class="user-data">
-                        <div class="img">Ecco</div>
+                        <div class="img circle pro-pic">
+                            <img src="img\avatar_io.jpg" alt="">
+                        </div>
                         <p>sofia</p>
                     </div>
                     <div class="icons">
@@ -51,7 +53,7 @@
                 <div class="contacts">
                     <ul>
                         <li class="contact-item" v-for="(contact , index) in contacts">
-                        <img :src="" alt="">
+                        <img class="circle pro-pic" :src="contact.avatar" alt="">
                         <h5>{{contact.name}}</h5>
                         </li>
                     </ul>
@@ -61,8 +63,10 @@
             <div class="col-right">
                 <div class="header">
                     <div class="user-data">
-                        <div class="img">Ecco</div>
-                        <p>sofia</p>
+                        <div class="img circle pro-pic">
+                            <img src="img/avatar_1.jpg" alt="">
+                        </div>
+                        <p>Michele</p>
                     </div>
                     <div class="icons">
                         <i class="fa-solid fa-magnifying-glass"></i>
