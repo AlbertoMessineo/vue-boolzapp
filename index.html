@@ -63,7 +63,13 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
-                <div class="chat"></div>
+                <div class="chat">
+                    <ul>
+                        <li v-for="contact in contacts">
+                        {{contacts.name}}
+                        </li>
+                    </ul>
+                </div>
                 <div class="message">
                     <i class="fa-regular fa-face-smile msg-icon"></i>
                     <input type="text" class="msg-text" placeholder ="  Scrivi un messaggio">
