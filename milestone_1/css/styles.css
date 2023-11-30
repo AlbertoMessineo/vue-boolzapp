@@ -155,4 +155,31 @@ body{
    cursor: pointer;
  }
  
+ /*MESSAGES */
+ .chat{
+   display: flex;
+   flex-direction: column;
+ }
+ .sent , .received{
+   border-radius: 4px;
+   
+ }
+ .sent{
+   background-color: #d5f9ba;
+   align-self: flex-end;
+   padding: 10px;
+   padding-right: 100px;
+   margin: 30px;
+   margin-right: 100px;
+ }
+
+ .received{
+   background-color: #ffffff;
+   align-self: flex-start;
+   padding: 10px;
+   padding-right: 100px;
+   margin: 18px;
+   margin-left: 100px;
+ }
+
 
