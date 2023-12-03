@@ -34,7 +34,7 @@
                 <div class="header border-right pro-pic">
                     <div class="user-data">
                         <div class="img circle pro-pic">
-                            <img src="img\avatar_io.jpg" alt="">
+                            <img src="img\io.jpg" alt="">
                         </div>
                         <p>Alberto</p>
                     </div>
@@ -58,7 +58,8 @@
                 </div>
                 <div class="contacts">
                     <ul>
-                        <li class="contact-item" v-for="(contact , index) in contacts" :class="{active: currentChat === index}" @click="changeChat(index)">
+                        <li class="contact-item" v-for="(contact , index) in contacts"
+                            :class="{active: currentChat === index}" @click="changeChat(index)">
                             <img class="circle pro-pic" :src="contact.avatar" alt="">
                             <h5>{{contact.name}}</h5>
 
@@ -67,11 +68,11 @@
                 </div>
             </div>
             <!-- RIGHT COLUMN -->
-            <div class="col-right">   
+            <div class="col-right">
                 <div class="header">
                     <div class="user-data">
                         <div class="img circle pro-pic">
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src="contacts[currentChat].avatar" alt="">
                         </div>
                         <p>{{contacts[currentChat].name}}</p>
                     </div>
@@ -82,9 +83,11 @@
                     </div>
                 </div>
                 <div class="chat">
-                    <!-- <div  v-for="(message , index) in contact.messages"> -->
-                        <div class="sent">ciao</div>
-                        <div class="received">ciao</div>
+                    <div v-for="(messageItem , index) in contacts[currentChat].messages">
+                        <div v-if="messageItem.status === 'sent' " class="sent">{{messageItem.message}}</div>
+                        <div v-else class="received">{{messageItem.message}}</div>
+                        <!-- {{contacts[currentChat].messages}} -->
+                    </div>
                 </div>
                 <div class="message">
                     <i class="fa-regular fa-face-smile msg-icon"></i>
@@ -93,13 +96,10 @@
                 </div>
             </div>
         </div>
-
-
-    </div>
-    <!-- LINK VUE JS -->
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-    <!-- LINK JS -->
-    <script src="js/main.js"></script>
+        <!-- LINK VUE JS -->
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+        <!-- LINK JS -->
+        <script src="js/main.js"></script>
 </body>
 
 </html>

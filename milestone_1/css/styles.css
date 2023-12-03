@@ -151,7 +151,7 @@ body{
     border-top: 0.2px solid #faf9f7; ;
  }
  .contact-item:hover{
-   background-color: #b1b1b1;
+   background-color: #e9ebeb;
    cursor: pointer;
  }
  .contacts .contact-item.active{
