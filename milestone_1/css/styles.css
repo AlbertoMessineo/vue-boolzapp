@@ -144,7 +144,7 @@ body{
     overflow-y: scroll;
  }
  .contact-item{
-    padding: 18px 0;
+    padding: 20px 0;
     display: flex;
     background-color: #ffffff;
     line-height: 2;
@@ -153,6 +153,10 @@ body{
  .contact-item:hover{
    background-color: #b1b1b1;
    cursor: pointer;
+ }
+ .contacts .contact-item.active{
+   background-color: #e9ebeb;
+
  }
  
  /*MESSAGES */

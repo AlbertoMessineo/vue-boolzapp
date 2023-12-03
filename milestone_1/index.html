@@ -36,7 +36,7 @@
                         <div class="img circle pro-pic">
                             <img src="img\avatar_io.jpg" alt="">
                         </div>
-                        <p>sofia</p>
+                        <p>Alberto</p>
                     </div>
                     <div class="icons">
                         <i class="fa-solid fa-circle-notch"></i>
@@ -58,21 +58,22 @@
                 </div>
                 <div class="contacts">
                     <ul>
-                        <li class="contact-item" v-for="(contact , index) in contacts">
+                        <li class="contact-item" v-for="(contact , index) in contacts" :class="{active: currentChat === index}" @click="changeChat(index)">
                             <img class="circle pro-pic" :src="contact.avatar" alt="">
                             <h5>{{contact.name}}</h5>
+
                         </li>
                     </ul>
                 </div>
             </div>
             <!-- RIGHT COLUMN -->
-            <div class="col-right">
+            <div class="col-right">   
                 <div class="header">
                     <div class="user-data">
                         <div class="img circle pro-pic">
                             <img src="img/avatar_1.jpg" alt="">
                         </div>
-                        <p>Michele</p>
+                        <p>{{contacts[currentChat].name}}</p>
                     </div>
                     <div class="icons">
                         <i class="fa-solid fa-magnifying-glass"></i>
@@ -80,11 +81,10 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
-                <div  v-for="(contact , index) in contacts" class="chat">
-                    <div  v-for="(message , index) in contact.messages">
-                        <div v-if = "message.status === 'sent' " class="sent">{{message.message}}</div>
-                        <div class="received"> {{message.message}}</div>
-                    </div>
+                <div class="chat">
+                    <!-- <div  v-for="(message , index) in contact.messages"> -->
+                        <div class="sent">ciao</div>
+                        <div class="received">ciao</div>
                 </div>
                 <div class="message">
                     <i class="fa-regular fa-face-smile msg-icon"></i>
