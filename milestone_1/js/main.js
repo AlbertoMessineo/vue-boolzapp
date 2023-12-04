@@ -187,6 +187,14 @@ createApp({
                 status: 'sent'
               });
               this.newMsg = '';
+              setTimeout(this.autoAnswer, 1000);
+        },
+        autoAnswer(){
+            console.log('arriva la risposta');
+            this.contacts[this.currentChat].messages.push({
+                message: 'Ok👍🏻',
+                status: 'received',
+            })
         }
     },
       
