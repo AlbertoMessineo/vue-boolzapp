@@ -97,13 +97,13 @@
                 </div>
                 <div class="message">
                     <i class="fa-regular fa-face-smile msg-icon"></i>
-                    <input type="text" class="msg-text" placeholder="  Scrivi un messaggio">
+                    <input v-model="newMsg" type="text" class="msg-text" placeholder="  Scrivi un messaggio"  @keyup.enter="sendMsg()">
                     <i class=" fa-solid fa-microphone msg-icon"></i>
                 </div>
             </div>
         </div>
         <!-- LINK LUXON -->
-        <script src="js/luxon.js"></script>
+        <!-- <script src="js/luxon.js"></script> -->
         <!-- LINK VUE JS -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <!-- LINK JS -->

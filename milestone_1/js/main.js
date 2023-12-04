@@ -9,6 +9,7 @@ createApp({
     
     return {
         currentChat : 0,
+        newMsg: '',
         contacts: [
         {
             name: 'Michele',
@@ -179,6 +180,14 @@ createApp({
             console.log(index);
             this.currentChat = index;
         },
+        sendMsg(){
+            console.log('sto inviando un messaggio');
+            this.contacts[this.currentChat].messages.push({
+                message: this.newMsg,
+                status: 'sent'
+              });
+              this.newMsg = '';
+        }
     },
       
 }).mount('#app')
