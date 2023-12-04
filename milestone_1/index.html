@@ -82,12 +82,18 @@
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </div>
-                <div class="chat">
-                    <div v-for="(messageItem , index) in contacts[currentChat].messages">
-                        <div v-if="messageItem.status === 'sent' " class="sent">{{messageItem.message}}</div>
-                        <div v-else class="received">{{messageItem.message}}</div>
-                        <!-- {{contacts[currentChat].messages}} -->
-                    </div>
+                <!-- CHAT WITH DYNAMIC MESSAGES -->
+                <div v-for="(messageItem , index) in contacts[currentChat].messages" class="chat">
+                    <!-- <div v-for="(messageItem , index) in contacts[currentChat].messages" class="dialogue"> -->
+                        <div v-if="messageItem.status === 'sent' " class="sent">
+                            <p>{{messageItem.message}}</p>
+                            <div class="time">16:48</div>
+                        </div>
+                        <div v-else class="received">
+                            <p>{{messageItem.message}}</p>
+                            <div class="time">16:49</div>
+                        </div>
+                    <!-- </div> -->
                 </div>
                 <div class="message">
                     <i class="fa-regular fa-face-smile msg-icon"></i>
@@ -96,6 +102,8 @@
                 </div>
             </div>
         </div>
+        <!-- LINK LUXON -->
+        <script src="js/luxon.js"></script>
         <!-- LINK VUE JS -->
         <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
         <!-- LINK JS -->

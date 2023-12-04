@@ -3,6 +3,7 @@
 const { createApp } = Vue;
 
 
+
 createApp({
   data() {
     
@@ -179,5 +180,6 @@ createApp({
             this.currentChat = index;
         },
     },
+      
 }).mount('#app')
 
